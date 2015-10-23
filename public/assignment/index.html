@@ -11,10 +11,21 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 		<script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.0/angular.js"></script>
-  		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.0/angular-route.js"></script>
-  		<script src="app.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.0/angular-route.js"></script>
+  	<script src="app.js"></script>
+    <script src="config.js"></script>
+    <script src="sidebar/sidebar.controller.js"></script>
+    <script src="header/header.controller.js"></script>
+    <script src="service/UserService.js"></script>
+    <script src="service/FormService.js"></script>
+    <script src="login/login.controller.js"></script>
+    <script src="register/register.controller.js"></script>
+    <script src="profile/profile.controller.js"></script>
+    <script src="form/form.controller.js"></script>
+    <script src="uuid.js"></script>
 		<link rel="stylesheet" href="css/dashboard.css">
 		<link rel="stylesheet" href="css/style.css">
+
 
 		<title>Welcome !</title>
 	</head>
@@ -24,12 +35,7 @@
     <div class="container-fluid" ng-include="'header/header.view.html'"></div>
 
     <div class="container-fluid" ng-include="'sidebar/sidebar.view.html'"></div>
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h1 class="page-header">Welcome !</h1>
-          <p>
-          	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam.
-          </p>
-
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" ng-view></div>
 
         </div>
 
