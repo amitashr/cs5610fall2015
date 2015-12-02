@@ -4,7 +4,7 @@
 	angular.module("FormBuilderApp").factory("FormService", FormService);
 
 	function FormService($http, $q) {
-
+		var forms = [];
 
 		var service = {
 			createFormForUser : createFormForUser,

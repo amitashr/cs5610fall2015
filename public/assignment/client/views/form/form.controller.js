@@ -10,17 +10,25 @@
 		$scope.selectForm = selectForm;
 		$scope.deleteForm = deleteForm;
 
-		$scope.newForm = {};
+
+		
 
 		var userid = $rootScope.currentUser.id;
 
-		FormService.findAllFormsForUser(userid).then(function(forms){
-			$scope.forms = forms;
-		});
+		var init = function() {
+			if (userid){
+        		FormService.findAllFormsForUser(userid).then(function (forms) {
+            		$scope.forms = forms;
+          		});
+      		}
+     	}
+    	
+    	init();
+
 
 		function addForm() {
-			FormService.createFormForUser(userid, $scope.newForm).then(function(form) {
-				$scope.forms.push(form);
+			FormService.createFormForUser(userid, $scope.newForm).then(function(newForm) {
+				$scope.forms.push(newForm);
 				$scope.newForm = {};
 			});
 		}
