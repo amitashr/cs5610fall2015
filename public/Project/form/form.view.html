@@ -1,0 +1,47 @@
+ <h1 class="page-header">Forms</h1>
+          
+          <ul class="nav nav-tabs">
+                <li class="nav-item">
+                  <a href="#forms" class="nav-link active">Forms</a>
+                </li>
+                <li class="nav-item">
+                  <a href="form-fields.html" class="nav-link">Fields</a>
+                </li>
+          </ul>
+
+              <table name="forms" class="table table-striped" ng-controller="FormController">
+                <thead>
+                  <tr>
+                    <td>
+                      <span class="glyphicon glyphicon-sort" />
+                      Form Name
+                    </td>
+                    <td>
+                      <span class="glyphicon glyphicon-sort" />
+                      Action
+                    </td>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td>
+                      <input type="text" class="form-control" id="username" placeholder="username" ng-model="newForm.name">
+                    </td>
+                    <td>
+                      <a class="glyphicon glyphicon-plus" ng-click="addForm()"/>
+                      <a class="glyphicon glyphicon-ok"  ng-click="updateForm()"/>
+                    </td>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr ng-repeat="form in forms">
+                  <td> {{form.name}}</td>
+                  <td><a ng-click="deleteForm($index)" class="glyphicon glyphicon-remove"/>
+                      <a ng-click="selectForm($index)" class="glyphicon glyphicon-ok"/></td>
+                  </tr>
+
+    
+                </tbody>
+              </table>
