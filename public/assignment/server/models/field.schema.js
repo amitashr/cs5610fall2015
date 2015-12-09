@@ -4,7 +4,7 @@ module.exports = function(mongoose) {
   var objectId = mongoose.Schema.Types.ObjectId;
   var fieldSchema = new mongoose.Schema({
     id : {
-      type: objectId,
+      type: objectId
     },
     label : String,
     fieldType : {

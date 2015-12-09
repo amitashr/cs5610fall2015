@@ -63,4 +63,22 @@ function delMarker(id) {
     markerId = markerId - 1;
 }
 
+function resultMap() {
+    map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: -34.397, lng: 150.644},
+        zoom: 8
+    });
+
+    poly = new google.maps.Polyline({
+        strokeColor: '#0066ff',
+        strokeOpacity: 1.0,
+        strokeWeight: 3
+    });
+    poly.setMap(map);
+
+    var markers = $scope.route.markers;
+    console.log(markers);
+
+
+}
 

@@ -57,6 +57,50 @@ module.exports = function(app, model) {
 		});
 		
 	});
+
+	//Add route
+	app.post('/api/assignment/route', function(req, res) {
+		console.log(req.body);
+		model.CreateRoute(req.body).then(function(route){
+			res.json(route);
+		});
+		res.json(req.body);
+	});
+
+	//Find all routes
+	app.get('/api/assignment/route', function(req, res) {
+		model.FindAllRoutes().then(function(routes){
+			res.json(routes);
+		})
+	});
+
+	//Search for routes
+	app.get('/api/assignment/searchRoutes', function(req, res){
+		var searchObj = {};
+		console.log(req.param("source"));
+		console.log(req.param("dest"));
+		if (req.param("dest") == "undefined" || false)
+			console.log("works");
+
+		if (req.param("source") != null && req.param("source") != "undefined")
+			searchObj.source = new RegExp(req.param("source"), "i");
+		if (req.param("dest") != null && req.param("dest") != "undefined")
+			searchObj.dest = new RegExp(req.param("dest"), "i");
+		if (req.param("terrain") != null && req.param("terrain") != "undefined")
+			searchObj.terrain = new RegExp(req.param("terrain"), "i");
+		if (req.param("difficulty") != null && req.param("difficulty") != "undefined")
+			searchObj.difficulty = new RegExp(req.param("difficulty"), "i");
+		model.SearchForRoutes(searchObj).then(function(routes){
+			res.json(routes);
+		})
+	});
+
+	app.get('/api/assignment/routeById', function(req, res) {
+		console.log("ID in js " + req.param("id"));
+		model.FindRouteById(req.param("id")).then(function (route) {
+			res.json(route);
+		})
+	});
 };
 
 

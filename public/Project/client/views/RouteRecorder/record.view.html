@@ -1,7 +1,53 @@
 <h1 class="page-header" style="text-align: center">Create a Route</h1>
 <div class="container">
     <div class="row">
-        <div id="map" class="col-lg-12 col-md-12 col-sm-12" style="height: 400px"></div>
+        <div id="map" class="col-lg-12 col-md-12 col-sm-12" style="height: 600px"></div>
+    </div>
+    <div class="row">
+        <form class="form-horizontal col-lg-offset-1" ng-controller="RecordController" style="padding-top: 1cm">
+            <div class="form-group">
+                <label for="source" class="col-sm-2 control-label">Source</label>
+                <div class="col-sm-10 col-lg-6">
+                    <input type="text" class="form-control" id="source" placeholder="Starting Location" ng-model="route.source">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="dest" class="col-sm-2 control-label">Destination</label>
+                <div class="col-sm-10 col-lg-6">
+                    <input type="text" class="form-control" id="dest" placeholder="Destination" ng-model="route.dest">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="terrain" class="col-sm-2 control-label">Terrain</label>
+                <div class="col-sm-10 col-lg-6">
+                    <select class="form-control" id="terrain" ng-model="route.terrain">
+                        <option value="road">Roads</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="offroad">Offroad only</option>
+                        <option value="path">Bike Path</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="difficulty" class="col-sm-2 control-label">Difficulty</label>
+                <div class="col-sm-10 col-lg-6">
+                    <select class="form-control" id="difficulty" ng-model="route.difficulty">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-12 col-lg-6">
+                    <a type="login" class="btn btn-danger" ng-click="record()" style="color: #ffffff">Record Route</a>
+                </div>
+            </div>
+
+        </form>
     </div>
 </div>
 

@@ -22,6 +22,10 @@
 				.when("/recordRoute", {
 					templateUrl: "./views/RouteRecorder/record.view.html"
 				})
+				.when("/route/:routeId", {
+					templateUrl: "./views/results/results.view.html",
+					controller: "ResultsController"
+				})
 				.otherwise({
 					redirectTo: "/home"
 				});

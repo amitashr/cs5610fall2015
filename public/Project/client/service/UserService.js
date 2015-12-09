@@ -14,7 +14,11 @@
 			findAllUsers : findAllUsers,
 			createUser : createUser,
 			deleteUserById : deleteUserById,
-			updateUser : updateUser
+			updateUser : updateUser,
+			recordRoute : recordRoute,
+			findAllRoutes : findAllRoutes,
+			searchForRoutes : searchForRoutes,
+			findRouteById : findRouteById
 		};
 
 		return service;
@@ -66,6 +70,44 @@
 			$http.put('/api/assignment/user/'+userid, update_info).success(function(resp) {
 			    	deferred.resolve(resp);
 			    });
+
+			return deferred.promise;
+		}
+
+		function recordRoute(route) {
+			var deferred = $q.defer();
+			console.log(route);
+			$http.post('/api/assignment/route', route).success(function(resp) {
+				deferred.resolve(resp);
+			});
+
+			return deferred.promise;
+		}
+
+		function findAllRoutes() {
+			var deferred = $q.defer();
+			$http.get('/api/assignment/route').success(function(resp) {
+				deferred.resolve(resp);
+			});
+
+			return deferred.promise;
+		}
+
+		function searchForRoutes(source, dest, terrain, difficulty) {
+			var deferred = $q.defer();
+			$http.get('/api/assignment/searchRoutes?source='+source+'&dest='+dest+'&terrain='+terrain+'&difficulty='+difficulty).success(function(resp) {
+				deferred.resolve(resp);
+			});
+
+			return deferred.promise;
+
+		}
+
+		function findRouteById(id) {
+			var deferred = $q.defer();
+			$http.get('/api/assignment/routeById?id='+id).success(function (resp) {
+				deferred.resolve(resp);
+			});
 
 			return deferred.promise;
 		}
