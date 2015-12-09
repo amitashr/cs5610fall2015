@@ -22,7 +22,7 @@
 
                 var map = new google.maps.Map(document.getElementById('map'), {
                     center: {lat: -34.397, lng: 150.644},
-                    zoom: 8
+                    zoom: 9
                 });
 
                 var poly = new google.maps.Polyline({
@@ -38,7 +38,18 @@
                 };
 
                 map.setCenter(pos);
-
+                var startLatLng = new google.maps.LatLng($scope.route.markers[0].lat, $scope.route.markers[0].lng);
+                var endLatLng = new google.maps.LatLng($scope.route.markers[$scope.route.markers.length - 1].lat, $scope.route.markers[$scope.route.markers.length - 1].lng);
+                var startMarker = new google.maps.Marker({
+                    position: startLatLng,
+                    map: map
+                });
+                var endMarker = new google.maps.Marker({
+                    position: endLatLng,
+                    map: map
+                });
+                //placeMarker(new google.maps.LatLng($scope.route.markers[0].lat, $scope.route.markers[0].lng));
+                //placeMarker(new google.maps.LatLng($scope.route.markers[$scope.route.markers.length - 1].lat, $scope.route.markers[$scope.route.markers.length - 1].lng));
 
                 var marker;
                 for (marker in $scope.route.markers) {
@@ -48,10 +59,6 @@
                 }
             });
 
-
-
-
-
         }
 
         function placeMarker(location) {
@@ -59,10 +66,6 @@
                 position: location,
                 map: map
             });
-            var path = poly.getPath();
-            path.push(location);
-            markerId = markerId + 1;
-            markers[markerId] = marker;
         }
 
 
