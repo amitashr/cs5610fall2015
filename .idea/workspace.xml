@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fed61171-da72-4397-b915-3a608e955671" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/Project/client/views/home/home.view.html" afterPath="$PROJECT_DIR$/public/Project/client/views/home/home.view.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/Project/client/views/login/login.view.html" afterPath="$PROJECT_DIR$/public/Project/client/views/login/login.view.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/Project/client/views/profile/profile.controller.js" afterPath="$PROJECT_DIR$/public/Project/client/views/profile/profile.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/Project/client/views/RouteRecorder/record.controller.js" afterPath="$PROJECT_DIR$/public/Project/client/views/RouteRecorder/record.controller.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/Project/client/views/RouteRecorder/record.view.html" afterPath="$PROJECT_DIR$/public/Project/client/views/RouteRecorder/record.view.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/Project/client/views/results/results.controller.js" afterPath="$PROJECT_DIR$/public/Project/client/views/results/results.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/Project/client/views/results/results.view.html" afterPath="$PROJECT_DIR$/public/Project/client/views/results/results.view.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/Project/client/views/RouteRecorder/routeRecorder.js" afterPath="$PROJECT_DIR$/public/Project/client/views/RouteRecorder/routeRecorder.js" />
     </list>
     <ignored path="cs5610.iws" />
@@ -111,26 +105,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routeRecorder.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="routeRecorder.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/Project/client/views/RouteRecorder/routeRecorder.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5982275" vertical-offset="330" max-vertical-offset="1710">
-              <caret line="49" column="20" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1333" max-vertical-offset="2010">
+              <caret line="126" column="7" selection-start-line="126" selection-start-column="7" selection-end-line="126" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="record.view.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="record.view.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/Project/client/views/RouteRecorder/record.view.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.333334" vertical-offset="367" max-vertical-offset="1110">
-              <caret line="57" column="20" selection-start-line="57" selection-start-column="20" selection-end-line="57" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.16079633" vertical-offset="0" max-vertical-offset="1005">
+              <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#0;n#div#4;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#div#0;n#div#5;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#0;n#div#6;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -184,8 +177,8 @@
         <option value="$PROJECT_DIR$/public/Project/client/views/profile/profile.controller.js" />
         <option value="$PROJECT_DIR$/public/Project/client/views/home/home.view.html" />
         <option value="$PROJECT_DIR$/public/Project/client/views/RouteRecorder/record.controller.js" />
-        <option value="$PROJECT_DIR$/public/Project/client/views/RouteRecorder/record.view.html" />
         <option value="$PROJECT_DIR$/public/Project/client/views/results/results.controller.js" />
+        <option value="$PROJECT_DIR$/public/Project/client/views/RouteRecorder/record.view.html" />
         <option value="$PROJECT_DIR$/public/Project/client/views/RouteRecorder/routeRecorder.js" />
       </list>
     </option>
@@ -194,8 +187,8 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="338" />
-    <option name="y" value="74" />
+    <option name="x" value="163" />
+    <option name="y" value="23" />
     <option name="width" value="1019" />
     <option name="height" value="797" />
   </component>
@@ -863,15 +856,15 @@
       <option name="number" value="Default" />
       <updated>1449098347852</updated>
       <workItem from="1449098348507" duration="28786000" />
-      <workItem from="1449528077027" duration="31691000" />
+      <workItem from="1449528077027" duration="33180000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60477000" />
+    <option name="totallyTimeSpent" value="61966000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="338" y="74" width="1019" height="797" extended-state="0" />
+    <frame x="163" y="23" width="1019" height="797" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1311,19 +1304,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/Project/client/views/RouteRecorder/record.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.333334" vertical-offset="367" max-vertical-offset="1110">
-          <caret line="57" column="20" selection-start-line="57" selection-start-column="20" selection-end-line="57" selection-end-column="20" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#4;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#5;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#6;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/Project/client/views/RouteRecorder/record.controller.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="178" max-vertical-offset="885">
@@ -1342,9 +1322,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/Project/client/views/RouteRecorder/routeRecorder.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5982275" vertical-offset="330" max-vertical-offset="1710">
-          <caret line="49" column="20" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1333" max-vertical-offset="2010">
+          <caret line="126" column="7" selection-start-line="126" selection-start-column="7" selection-end-line="126" selection-end-column="7" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/Project/client/views/RouteRecorder/record.view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16079633" vertical-offset="0" max-vertical-offset="1005">
+          <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#5;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

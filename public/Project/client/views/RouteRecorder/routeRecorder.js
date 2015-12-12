@@ -6,6 +6,7 @@ var markerId = 0;
 var poly;
 var counter = 0;
 var watchId;
+var autoFlag = false;
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: -34.397, lng: 150.644},
@@ -88,21 +89,40 @@ function resultMap() {
 
 function autoRecord() {
     console.log("Recording...");
-    if (navigator.geolocation) {
-        watchId = navigator.geolocation.watchPosition(placeMarkerRecord);
+    var button;
+    if (!autoFlag) {
+        autoFlag = true;
+        button = document.getElementById("autoRecord");
+        button.innerHTML = "Stop";
+        if (navigator.geolocation) {
+            watchId = navigator.geolocation.watchPosition(placeMarkerRecord);
+        } else {
+            alert("Your browser does not support geolocation");
+        }
     } else {
-        alert("Your browser does not support geolocation");
+        autoFlag = false;
+        button = document.getElementById("autoRecord");
+        button.innerHTML = "Auto Record Route";
+        stopWatching();
     }
+
 
 }
 
 function placeMarkerRecord(pos) {
-    var lat = pos.coords.latitude;
-    var lng = pos.coords.longitude;
-    placeMarker(new google.maps.LatLng(lat,lng));
+    counter += 1;
+    if(counter % 3 == 0 || counter == 0) {
+        var lat = pos.coords.latitude;
+        var lng = pos.coords.longitude;
+        placeMarker(new google.maps.LatLng(lat,lng));
+    }
+
 }
 
 function stopWatching() {
-    console.log("Recording stopeed");
+    console.log("Recording stoped");
     navigator.geolocation.clearWatch(watchId);
+    navigator.geolocation.getCurrentPosition(function(position) {
+        placeMarker(pos);
+    });
 }

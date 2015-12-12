@@ -6,6 +6,11 @@
     <div class="row">
         <form class="form-horizontal col-lg-offset-1" ng-controller="RecordController" style="padding-top: 1cm">
             <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-12 col-lg-8">
+                    <a type="login" id="autoRecord" class="btn btn-danger" onclick="autoRecord()" style="color: #ffffff">Auto Record Route</a>
+                </div>
+            </div>
+            <div class="form-group">
                 <label for="source" class="col-sm-2 control-label">Source</label>
                 <div class="col-sm-10 col-lg-6">
                     <input type="text" class="form-control" id="source" placeholder="Starting Location" ng-model="route.source">
@@ -44,18 +49,6 @@
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-12 col-lg-6">
                     <a type="login" class="btn btn-danger" ng-click="record()" style="color: #ffffff">Submit Route</a>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-12 col-lg-6">
-                    <a type="login" class="btn btn-danger" onclick="autoRecord()" style="color: #ffffff">Auto Record Route</a>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-12 col-lg-6">
-                    <a type="login" class="btn btn-danger" onclick="stopWatching()" style="color: #ffffff">Stop Recording</a>
                 </div>
             </div>
 
