@@ -4,11 +4,23 @@
 
     angular.module("FormBuilderApp").controller("RecordController", RecordController);
 
-    function RecordController($rootScope, $scope, UserService) {
+    function RecordController($rootScope, $scope, $location, UserService) {
         console.log("test");
 
         $scope.user = $rootScope.currentUser;
         $scope.record = record;
+
+        $scope.verifyLogin = verifyLogin;
+
+        verifyLogin();
+
+        function verifyLogin() {
+            if (! $scope.user) {
+                alert("Please log in");
+                $location.url('/home');
+            }
+
+        }
 
         function record() {
             var customMarkers = [];

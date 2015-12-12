@@ -62,7 +62,7 @@
         <div ng-repeat="route in routes" class="col-md-12 row" style="margin-top: 15px;">
             <hr>
             <h2>
-                <a ng-click="navigate($index)">{{route.source}} to {{route.dest}}</a>
+                <a ng-click="navigate($index)">{{route.source}} to {{route.dest}} by {{route.user.username}}</a>
             </h2>
         </div>
     </div>

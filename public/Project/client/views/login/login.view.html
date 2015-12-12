@@ -1,21 +1,25 @@
-<h1 class="page-header">Login </h1>
+<h1 class="page-header" style="text-align: center">Login </h1>
             
-            <form class="form-horizontal" ng-controller="LoginController">
-              <div class="form-group">
-                <label for="username" class="col-sm-2 control-label">Username</label>
-                <div class="col-sm-10">
-                  <input type="text" class="form-control" id="username" placeholder="Username" ng-model="username">
+
+              <div class="col-md-12">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                  <form class="form-horizontal" ng-controller="LoginController">
+                    <div class="form-group">
+                      <label for="username" class="control-label">Username</label>
+                      <input type="text" class="form-control" id="username" placeholder="Username" ng-model="username">
+                    </div>
+                    <div class="form-group">
+                      <label for="password" class="control-label">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Password" ng-model="password">
+                    </div>
+                    <div class="form-group">
+                      <a type="login" class="btn btn-primary col-md-12" ng-click="login()">Login</a>
+                    </div>
+                  </form>
                 </div>
+                <div class="col-md-2"></div>
               </div>
-              <div class="form-group">
-                <label for="password" class="col-sm-2 control-label">Password</label>
-                <div class="col-sm-10">
-                  <input type="password" class="form-control" id="password" placeholder="Password" ng-model="password">
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-10">
-                  <a type="login" class="btn btn-default" ng-click="login()">Login</a>
-                </div>
-              </div>
-            </form>
+
+
+

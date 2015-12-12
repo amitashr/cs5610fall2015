@@ -44,6 +44,8 @@
                     position: startLatLng,
                     map: map
                 });
+                map.setZoom(15);
+                map.panTo(startMarker.position);
                 var endMarker = new google.maps.Marker({
                     position: endLatLng,
                     map: map

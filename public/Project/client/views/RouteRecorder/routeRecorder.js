@@ -4,10 +4,12 @@ var map;
 var markers={};
 var markerId = 0;
 var poly;
+var counter = 0;
+var watchId;
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: -34.397, lng: 150.644},
-        zoom: 8
+        zoom: 15
     });
 
     poly = new google.maps.Polyline({
@@ -44,6 +46,8 @@ function placeMarker(location) {
         position: location,
         map: map
     });
+    map.panTo(marker.position);
+    map.setZoom(15);
     var path = poly.getPath();
     path.push(location);
     markerId = markerId + 1;
@@ -66,7 +70,7 @@ function delMarker(id) {
 function resultMap() {
     map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: -34.397, lng: 150.644},
-        zoom: 8
+        zoom: 12
     });
 
     poly = new google.maps.Polyline({
@@ -82,3 +86,23 @@ function resultMap() {
 
 }
 
+function autoRecord() {
+    console.log("Recording...");
+    if (navigator.geolocation) {
+        watchId = navigator.geolocation.watchPosition(placeMarkerRecord);
+    } else {
+        alert("Your browser does not support geolocation");
+    }
+
+}
+
+function placeMarkerRecord(pos) {
+    var lat = pos.coords.latitude;
+    var lng = pos.coords.longitude;
+    placeMarker(new google.maps.LatLng(lat,lng));
+}
+
+function stopWatching() {
+    console.log("Recording stopeed");
+    navigator.geolocation.clearWatch(watchId);
+}
