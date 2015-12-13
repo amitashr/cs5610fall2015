@@ -15,7 +15,6 @@
         function search() {
             UserService.searchForRoutes($scope.source, $scope.dest, $scope.terrain, $scope.difficulty).then(function(routes) {
                     $scope.routes = routes;
-                    console.log("ysy");
                 });
         }
 

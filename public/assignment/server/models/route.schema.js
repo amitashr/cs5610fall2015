@@ -14,7 +14,12 @@ module.exports = function(mongoose) {
         user : {
             id : mongoose.Schema.Types.ObjectId,
             username : String
-        }
+        },
+        comments : [{
+            username : String,
+            comment : String
+        }]
+
 
 
     }, {collection: 'cs5610.assignment.route'});

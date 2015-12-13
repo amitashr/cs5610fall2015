@@ -21,8 +21,8 @@
                             <div class="col-md-2"></div>
                             <div class="col-md-8">
                                 <div class="col-md-6">
-                                    <select class="form-control" id="terrain" ng-model="route.terrain">
-                                        <option label=" "></option>
+                                    <select class="form-control" id="terrain" ng-model="terrain">
+                                        <option value="" disabled selected>Terrain</option>
                                         <option value="road">Roads</option>
                                         <option value="intermediate">Intermediate</option>
                                         <option value="offroad">Offroad only</option>
@@ -30,8 +30,8 @@
                                     </select>
                                 </div>
                                 <div class="col-md-6">
-                                    <select class="form-control" id="difficulty" ng-model="route.difficulty">
-                                        <option label=" "></option>
+                                    <select class="form-control" id="difficulty" ng-model="difficulty">
+                                        <option value="" disabled selected>Difficulty</option>
                                         <option value="1">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>

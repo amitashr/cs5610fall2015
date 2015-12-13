@@ -111,7 +111,7 @@ function autoRecord() {
 
 function placeMarkerRecord(pos) {
     counter += 1;
-    if(counter % 3 == 0 || counter == 0) {
+    if(counter % 6 == 0 || counter == 0) {
         var lat = pos.coords.latitude;
         var lng = pos.coords.longitude;
         placeMarker(new google.maps.LatLng(lat,lng));
@@ -123,6 +123,6 @@ function stopWatching() {
     console.log("Recording stoped");
     navigator.geolocation.clearWatch(watchId);
     navigator.geolocation.getCurrentPosition(function(position) {
-        placeMarker(pos);
+        placeMarker(position);
     });
 }

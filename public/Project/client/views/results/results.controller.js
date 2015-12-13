@@ -7,6 +7,9 @@
     function ResultsController($rootScope, $scope, $location, $routeParams, UserService) {
         $scope.$location = $location;
         $scope.display = display;
+        $scope.user = $rootScope.currentUser;
+        $scope.comment = comment;
+
         var id = $routeParams.routeId;
         display(id);
         var markers = [];
@@ -63,12 +66,30 @@
 
         }
 
+
         function placeMarker(location) {
             var marker = new google.maps.Marker({
                 position: location,
                 map: map
             });
         }
+
+        function comment() {
+            if (!$scope.user)
+                alert("You must log in to comment");
+            else {
+                var c = {
+                    username : $scope.user.username,
+                    comment : $scope.r.comment
+                };
+                $scope.route.comments.push(c);
+                UserService.updateRoute($scope.route).then(function(route){
+                    $scope.route = route;
+                    alert("Comment posted");
+                });
+            }
+        }
+
 
 
 

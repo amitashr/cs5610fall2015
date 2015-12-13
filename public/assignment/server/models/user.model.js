@@ -19,7 +19,8 @@ module.exports = function(app, mongoose, db) {
 		CreateRoute: CreateRoute,
 		FindAllRoutes: FindAllRoutes,
 		SearchForRoutes: SearchForRoutes,
-		FindRouteById: FindRouteById
+		FindRouteById: FindRouteById,
+		UpdateRoute: UpdateRoute
 
 	};
 
@@ -137,7 +138,7 @@ module.exports = function(app, mongoose, db) {
 		console.log("creating route");
 		RouteModel.create(route, function(err, newRoute) {
 			if (err) {
-				console.log("err");
+				console.log(err);
 				deferred.reject(err);
 			}
 
@@ -146,6 +147,28 @@ module.exports = function(app, mongoose, db) {
 			}
 
 		});
+		return deferred.promise;
+	}
+
+	function UpdateRoute(route) {
+		console.log("Updating");
+		var deferred = q.defer();
+		console.log(route.comments);
+		RouteModel.update({_id : route._id}, route, function(err, numAffected){
+				if (err){
+					console.log(err);
+					deferred.reject(err);
+
+				}
+
+				else {
+					console.log("Update success");
+					console.log(numAffected);
+					deferred.resolve(route);
+				}
+
+			}
+		);
 		return deferred.promise;
 	}
 

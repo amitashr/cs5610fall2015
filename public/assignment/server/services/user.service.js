@@ -49,6 +49,14 @@ module.exports = function(app, model) {
 		
 	});
 
+	//Update Route
+	app.put('/api/assignment/updateRoute', function(req, res) {
+		console.log("Calling route update");
+		model.UpdateRoute(req.body).then(function(route){
+			res.json(route);
+		});
+	});
+
 
 	//Delete user
 	app.delete('/api/assignment/user/:id', function(req, res){
@@ -79,6 +87,7 @@ module.exports = function(app, model) {
 		var searchObj = {};
 		console.log(req.param("source"));
 		console.log(req.param("dest"));
+		console.log(req.param("terrain"));
 		if (req.param("dest") == "undefined" || false)
 			console.log("works");
 

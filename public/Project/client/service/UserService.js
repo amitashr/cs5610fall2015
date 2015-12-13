@@ -18,7 +18,8 @@
 			recordRoute : recordRoute,
 			findAllRoutes : findAllRoutes,
 			searchForRoutes : searchForRoutes,
-			findRouteById : findRouteById
+			findRouteById : findRouteById,
+			updateRoute : updateRoute
 		};
 
 		return service;
@@ -95,6 +96,7 @@
 
 		function searchForRoutes(source, dest, terrain, difficulty) {
 			var deferred = $q.defer();
+			console.log(terrain);
 			$http.get('/api/assignment/searchRoutes?source='+source+'&dest='+dest+'&terrain='+terrain+'&difficulty='+difficulty).success(function(resp) {
 				deferred.resolve(resp);
 			});
@@ -106,6 +108,16 @@
 		function findRouteById(id) {
 			var deferred = $q.defer();
 			$http.get('/api/assignment/routeById?id='+id).success(function (resp) {
+				deferred.resolve(resp);
+			});
+
+			return deferred.promise;
+		}
+
+		function updateRoute(route) {
+			console.log("Adding comment");
+			var deferred = $q.defer();
+			$http.put('/api/assignment/updateRoute', route).success(function(resp) {
 				deferred.resolve(resp);
 			});
 
