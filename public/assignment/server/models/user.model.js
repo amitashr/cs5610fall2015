@@ -154,7 +154,7 @@ module.exports = function(app, mongoose, db) {
 		console.log("Updating");
 		var deferred = q.defer();
 		console.log(route.comments);
-		RouteModel.update({_id : route._id}, route, function(err, numAffected){
+		RouteModel.findOneAndUpdate({_id : route._id}, route, function(err, numAffected){
 				if (err){
 					console.log(err);
 					deferred.reject(err);
